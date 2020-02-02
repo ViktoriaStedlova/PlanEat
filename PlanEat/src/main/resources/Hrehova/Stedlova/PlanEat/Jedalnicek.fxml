@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="634.0" style="-fx-background-color: #ACE1AF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hrehova.Stedlova.PlanEat.JedalnicekController">
+   <children>
+      <TableView fx:id="tableViewJedalnicek" layoutX="24.0" layoutY="121.0" prefHeight="346.0" prefWidth="587.0" style="-fx-background-color: #8FBC8F;" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="22.799999999999955">
+        <columns>
+          <TableColumn fx:id="denStlpec" prefWidth="79.0" text="Deň" />
+          <TableColumn fx:id="nazovStlpec" prefWidth="366.0" text="Názov receptu" />
+            <TableColumn fx:id="datumStlpec" prefWidth="141.0" text="Dátum" />
+        </columns>
+      </TableView>
+      <Label layoutX="197.0" layoutY="39.0" prefHeight="60.0" prefWidth="174.0" text="Jedálniček" AnchorPane.leftAnchor="196.99999999999997" AnchorPane.rightAnchor="262.6">
+         <font>
+            <Font name="Century Gothic" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldNazov" layoutX="241.0" layoutY="494.0" prefHeight="25.0" prefWidth="153.0" promptText="Názov receptu" AnchorPane.rightAnchor="239.4">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="textFieldDen" layoutX="34.0" layoutY="494.0" promptText="Deň" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="451.2" />
+      <DatePicker fx:id="datePickerDatum" layoutX="34.0" layoutY="532.0" onAction="#actionDatum" promptText="Dátum" AnchorPane.leftAnchor="33.99999999999997" AnchorPane.rightAnchor="425.6" />
+      <Button fx:id="buttonUloz" layoutX="531.0" layoutY="566.0" mnemonicParsing="false" onAction="#actionUlozit" prefHeight="25.0" prefWidth="79.0" text="Uložiť" AnchorPane.bottomAnchor="14.399999999999999" AnchorPane.rightAnchor="23.799999999999997">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font></Button>
+      <Button fx:id="buttonVybratRecept" layoutX="263.0" layoutY="533.0" mnemonicParsing="false" onAction="#actionVybratRecept" text="Vybrať recept" AnchorPane.rightAnchor="273.4">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font></Button>
+      <ImageView fx:id="imageViewJedalnicek" fitHeight="60.0" fitWidth="66.0" layoutX="384.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="383.6" AnchorPane.rightAnchor="184.0">
+         <image>
+            <Image url="@jedalnicek1.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
